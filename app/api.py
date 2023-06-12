@@ -1,7 +1,7 @@
 import pandas as pd
 import tensorflow as tf
 from flask import Flask, request, jsonify
-#from db import  add_predict
+from db import  add_predict
 
 model = tf.keras.models.load_model('modelnew.h5')
 # Define the column names
@@ -24,7 +24,7 @@ def home():
 def predict():
     # Get the input data from the request
     input_data = request.get_json()
-    #add_predict(input_data)
+    add_predict(input_data)
     for feature in input_data:
         value = input_data[feature]
         if isinstance(value, str):
