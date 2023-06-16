@@ -37,7 +37,7 @@ The following are services provided by Sibisa-be.
 ### On Local Computer
 1. Clone repository PiCOS-BE on 
 2. Open CLI and direct to this repository which already cloned
-3. Run pip install -r requirements.tx
+3. Run pip install -r requirements.txt
 4. Run python3 run api.py
 
 ### On the Internet
