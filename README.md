@@ -3,7 +3,7 @@
 
 ## LINK WEBSITE
 https://picosbe-4hdubo35fq-et.a.run.app/ </br>
-ttps://picosbe-4hdubo35fq-et.a.run.app/predict </br>
+https://picosbe-4hdubo35fq-et.a.run.app/predict </br>
 
 
 ## Table of contents
