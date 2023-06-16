@@ -45,8 +45,8 @@ The following are services provided by Sibisa-be.
 
 ### With docker
 1. Make sure you have docker desktop on your local computer 
-2. Run docker build -t sibisa:0.1 .
-3. Run docker run -p 4000:8000 --name sibisa-be-app sibisa:0.1
+2. Run docker build -t  .
+3. Run docker run -p 
 
 ## Author
 * Muhammad Fauzan Adzhima&nbsp;&nbsp;(Teknik Elektro Universitas Telkom)
