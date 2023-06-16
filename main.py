@@ -3,6 +3,8 @@ import tensorflow as tf
 from flask import Flask, request, jsonify
 #from db import  add_predict
 
+key="AIzaSyDJxRysjbVDOnBpzRtjnqOzZ75_MVIAWY8"
+
 model = tf.keras.models.load_model('modelnew.h5')
 # Define the column names
 features = ['BMI', 'Blood Group', 'Cycle(R/I)',  'Pregnant(Y/N)',
@@ -20,11 +22,14 @@ app = Flask(__name__)
 def home():
     return jsonify({'message': 'Welcome to the API'})
 # Define the route for prediction
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST', 'GET'])
 def predict():
     # Get the input data from the request
     input_data = request.get_json()
     #add_predict(input_data)
+    if input_data is None:
+        return jsonify({'error': 'no data for prediction'}) 
+       
     for feature in input_data:
         value = input_data[feature]
         if isinstance(value, str):
@@ -41,7 +46,9 @@ def predict():
 
     # Return the predictions as a JSON response
     response = {'predictions': predictions}
-    return jsonify(response)
+    return jsonify(response), 200 # Return a HTTP status code 200 (OK)
+    
+    
     
 
 # Define the function for making predictions
