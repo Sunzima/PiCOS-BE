@@ -3,7 +3,7 @@ import tensorflow as tf
 from flask import Flask, request, jsonify
 #from db import  add_predict
 
-key="AIzaSyDJxRysjbVDOnBpzRtjnqOzZ75_MVIAWY8"
+# Load the model
 
 model = tf.keras.models.load_model('modelnew.h5')
 # Define the column names
